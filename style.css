@@ -1,0 +1,122 @@
+        :root{
+            --header-color: #000000d3;
+            --header2-color: #6a11cb;
+            --text-color: #000000d3;
+            --background-color: #fff;
+            --box-shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        
+        /* Profile section */
+        .profile-section {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            background-color: var(--background-color);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 15px var(--box-shadow-color);
+        }
+        
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+        }
+        
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--header-color);
+            box-shadow: 0 5px 15px var(--box-shadow-color);
+        }
+
+        .main-content {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+        
+        .profile-text h2 {
+            color: var(--header-color);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .profile-text p {
+            color: var(--text-color);
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+        
+        .box {
+            background-color: var(--background-color);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 15px var(--box-shadow-color);
+        }
+        
+        .box h3 {
+            color: var(--header-color);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .hobby-item, .aspiration-item {
+            margin-bottom: 15px;
+        }
+        
+        .hobby-item h4, .aspiration-item h4 {
+            color: var(--header2-color);
+            margin-bottom: 5px;
+        }
+        
+        /* Grid boxes */
+        .grid-boxes {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }     
+
+        @media (min-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .profile-section {
+                grid-column: 1 / 3;
+                grid-template-columns: 200px 1fr;
+            }
+
+            .grid-boxes {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
